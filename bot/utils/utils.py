@@ -147,8 +147,7 @@ class Utilities:
         out = out.decode().strip()
         if not out:
             return err.decode()
-        duration = round(float(out))
-        if duration:
+        if duration := round(float(out)):
             return duration
         return "No duration!"
 
